@@ -8,9 +8,13 @@
     <body>
         <h1>Exmple usage of Ejs : <%= data.userQuery %></h1>
         <ul>
-            <li><%= data.searchResults[0] %></li>
+            <% data.searchResults.forEach(result => { %> 
+                <li><%= result %></li>
+                <% }); %>
+                
+            <!-- <li><%= data.searchResults[0] %></li>
             <li><%= data.searchResults[1] %></li>
-            <li><%= data.searchResults[2] %></li>
+            <li><%= data.searchResults[2] %></li> -->
         </ul>
     </body>
 </html>
