@@ -7,6 +7,9 @@
     </head>
     <body>
         <h1>Exmple usage of Ejs : <%= data.userQuery %></h1>
+        <% if(data.loggedIn){ %>
+            <h3>You are logged in as : <%= data.username %></h3>
+            <% } %>
         <ul>
             <% data.searchResults.forEach(result => { %> 
                 <li><%= result %></li>
